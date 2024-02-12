@@ -3,11 +3,15 @@
 
 It has a ton of features. See for yourself: 
 
-![yes](https://i.imgur.com/SQYBRbj.gif)
-<br>*note that the framerates are 100x better in-game
+<div align="center">
+  <video src="https://github.com/diigit/EmitYourParticles/assets/72575705/a82af6c9-dd0e-44c9-9392-b7e506b5d44c" width=400></video>
+</div>
 
 Drag, reducing size, fading out and more! EmitYourParticles has it all! Squares are not the only thing it can emit either.
 
-![cats](https://i.imgur.com/3c2rMTO.gif)
+<div align="center">
+  <video src="https://github.com/diigit/EmitYourParticles/assets/72575705/d7aafbff-feea-478d-ab83-3b2bdbda4f33" width=400></video>
+</div>
 
 Read the documentation for more information on its various functions.
+  
