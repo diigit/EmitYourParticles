@@ -1,6 +1,6 @@
 ## Method 1
 
-Simply download the [model's .rbxm]() file for the module and drag it in Roblox studio. Then move it to ReplicatedStorage or whereever your want.
+Simply download the [model's .rbxm](https://github.com/diigit/EmitYourParticles/releases/latest) file for the module and drag it in Roblox studio. Then move it to ReplicatedStorage or whereever your want.
 
 ![Installation Method 1](https://sxcu.net/6so5mRk4i.gif)
 
