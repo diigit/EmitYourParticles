@@ -1,0 +1,1613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+      
+      <link rel="icon" href="https://sxcu.net/6speUAqA1.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Usage - EmitYourParticles Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#particle-emitter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EmitYourParticles Documentation" class="md-header__button md-logo" aria-label="EmitYourParticles Documentation" data-md-component="logo">
+      
+  <img src="https://sxcu.net/6soaT2zBl.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EmitYourParticles Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Usage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../installation/" class="md-tabs__link">
+        
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Usage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EmitYourParticles Documentation" class="md-nav__button md-logo" aria-label="EmitYourParticles Documentation" data-md-component="logo">
+      
+  <img src="https://sxcu.net/6soaT2zBl.png" alt="logo">
+
+    </a>
+    EmitYourParticles Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#particle-emitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particle Emitter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Particle Emitter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setemitterparticle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetEmitterParticle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setemitterrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetEmitterRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setemissionshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetEmissionShape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSpeed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setrotationspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetRotationSpeed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setrotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetRotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlifetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLifetime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setspreadangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSpreadAngle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setacceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetAcceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDrag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetScale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpropertytransition" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPropertyTransition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpropertytransition" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPropertyTransition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearparticles" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearParticles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearpropertytransitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearPropertyTransitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Particle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#particle-emitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particle Emitter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Particle Emitter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setemitterparticle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetEmitterParticle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setemitterrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetEmitterRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setemissionshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetEmissionShape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSpeed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setrotationspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetRotationSpeed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setrotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetRotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlifetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLifetime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setspreadangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSpreadAngle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setacceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetAcceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDrag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetScale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpropertytransition" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPropertyTransition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpropertytransition" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPropertyTransition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearparticles" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearParticles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearpropertytransitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClearPropertyTransitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Particle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Usage</h1>
+
+<h2 id="particle-emitter">Particle Emitter<a class="headerlink" href="#particle-emitter" title="Permanent link">&para;</a></h2>
+<div class="language-lua highlight"><span class="filename">Construction</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">emitYourParticle</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s1">&#39;Module Path Here&#39;</span><span class="p">)</span> <span class="c1">--(1)!</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">local</span> <span class="n">ParticleEmitter</span> <span class="o">=</span> <span class="n">emitYourParticle</span><span class="p">.</span><span class="n">newEmitter</span><span class="p">(</span><span class="n">GuiObject</span><span class="p">)</span> <span class="c1">--(2)!</span>
+</span></code></pre></div>
+<ol>
+<li>Replace this with your module's path. Remove the single quotes.</li>
+<li>Put your emitter's GUI object here.</li>
+</ol>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All of these are read-only. Only index when reading the properties. Set the properties using methods.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">GuiObject <a href="https://create.roblox.com/docs/reference/engine/classes/GuiObject"><code>GuiObject</code></a></td>
+<td style="text-align: left;">The particle emitter's GUI Object</td>
+<td style="text-align: left;"><code>GuiObject</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">TemplateParticle <a href="https://create.roblox.com/docs/reference/engine/classes/GuiObject"><code>GuiObject</code></a></td>
+<td style="text-align: left;">The particle emitter's particle</td>
+<td style="text-align: left;"><code>nil</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Particles <br><a href=""><code>{ Particle2D }</code></a></td>
+<td style="text-align: left;">An array of active particles</td>
+<td style="text-align: left;"><code>{ }</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">PropertyTransitions <br><a href=""><code>{ PropertyTransition }</code></a></td>
+<td style="text-align: left;">An array of active property transitions</td>
+<td style="text-align: left;"><code>nil</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">AllPropertiesSet <a href="https://create.roblox.com/docs/luau/booleans"><code>Boolean</code></a></td>
+<td style="text-align: left;">True if every <code>ParticleEmitter:ApplyDefaultProperties()</code> has been called</td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">DoUpdateSize <a href="https://create.roblox.com/docs/luau/booleans"><code>Boolean</code></a></td>
+<td style="text-align: left;">True if the <code>Scale</code> property is set and the NumberSequence is not a fixed number</td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Rate <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">Particles emitted every second</td>
+<td style="text-align: left;"><code>5</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">RateTick <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">A number from <code>0</code> to <code>1/Rate</code> that ticks up with the time and resets everytime it reaches <code>1/Rate</code>.</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Speed <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberRange"><code>NumberRange</code></a></td>
+<td style="text-align: left;">A range of speeds that determine the initial speed of a particle. Pixels/Second</td>
+<td style="text-align: left;"><code>[30 - 70]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">RotationSpeed <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberRange"><code>NumberRange</code></a></td>
+<td style="text-align: left;">A range of rotation speeds in full rotations every second</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotation <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberRange"><code>NumberRange</code></a></td>
+<td style="text-align: left;">A range of starting rotations of a particle.</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Lifetime <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberRange"><code>NumberRange</code></a></td>
+<td style="text-align: left;">A range of lifetimes in seconds which determine the time the particle will last.</td>
+<td style="text-align: left;"><code>[5 - 10]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">SpreadAngle <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberRange"><code>NumberRange</code></a></td>
+<td style="text-align: left;">A range of angles in degrees that the particle's initial velocity direction will be.</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">EmitShape <a href=""><code>'area' or 'point'</code></a></td>
+<td style="text-align: left;">If the EmitShape is 'area' then the emitter will emit throughout the emitter, if it is 'point' then it will emit at the TemplateParticle's position</td>
+<td style="text-align: left;"><code>'point'</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acceleration <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2"><code>Vector2</code></a></td>
+<td style="text-align: left;">The acceleration, in pixels/second^2, every particle will have.</td>
+<td style="text-align: left;"><code>[0, 0]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Drag <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">The time it takes for a particle to reach half its velocity.</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Scale <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberSequence"><code>NumberSequence</code></a></td>
+<td style="text-align: left;">The way the scale will change over a particle's lifetime.</td>
+<td style="text-align: left;"><code>NumberSequence.new(1, 1)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Most methods are chainable.</p>
+</div>
+<h4 id="setemitterparticle">SetEmitterParticle<a class="headerlink" href="#setemitterparticle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetEmitterParticle( <code>GuiObject:</code> <a href="https://create.roblox.com/docs/reference/engine/classes/GuiObject"><code>GuiObject</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the GUI object as the template particle. Property transitions are checked for compatibility and deleted if they are incompatible. All particles will be cleared.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">particleObject</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span><span class="p">.</span><span class="n">Frame</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetEmitterParticle</span><span class="p">(</span><span class="n">particleObject</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setemitterrate">SetEmitterRate<a class="headerlink" href="#setemitterrate" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetEmitterRate( <code>New Rate:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the speed particles are emitted at emissions per second.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetEmitterRate</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setemissionshape">SetEmissionShape<a class="headerlink" href="#setemissionshape" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetEmissionShape( <code>New Shape:</code> <a href=""><code>"area" | "point"</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the way the first position of a particle is determined. Read <a href="#properties">EmitShape property</a> for more info.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetEmissionShape</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setspeed">SetSpeed<a class="headerlink" href="#setspeed" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetSpeed( <code>New Speed:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the inital speed of a particle.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetSpeed( <code>Minimum Speed:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a>, <code>Maximum Speed:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the range of speeds that will be the initial speed of a particle.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetSpeed</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setrotationspeed">SetRotationSpeed<a class="headerlink" href="#setrotationspeed" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetRotationSpeed( <code>Rotation Speed:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the speed particles rotate. Rotations per second.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetRotationSpeed( <code>Minimum Rotation Speed:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a>, <code>Maximum  Rotation Speed:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the range of speeds at which the particles will rotate.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetRotationSpeed</span><span class="p">(</span><span class="mf">.2</span><span class="p">,</span> <span class="mf">.6</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setrotation">SetRotation<a class="headerlink" href="#setrotation" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetRotation( <code>Rotation:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the rotation particles will start at.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetRotation( <code>Minimum Rotation:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a>, <code>Maximum Rotation:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the range of rotations particles will start at.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetRotation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setlifetime">SetLifetime<a class="headerlink" href="#setlifetime" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetLifetime( <code>Lifetime:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the lifetime which is the amount of time the particles will be active until they get deleted.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetLifetime( <code>Minimum Lifetime:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a>, <code>Maximum Lifetime:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the range of lifetimes a particle will have.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetLifetime</span><span class="p">(</span><span class="mf">.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setspreadangle">SetSpreadAngle<a class="headerlink" href="#setspreadangle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetSpreadAngle( <code>Spread Angle:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the direction of a particle's velocity.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetSpreadAngle( <code>Minimum Spread Angle:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a>, <code>Maximum Spread Angle:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the range of a particle's velocity direction.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetSpreadAngle</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="mi">105</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setacceleration">SetAcceleration<a class="headerlink" href="#setacceleration" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetAcceleration( <code>New Acceleration:</code> <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2"><code>Vector2</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>self</code> Sets the speed at which the velocity of a particle will change.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetAcceleration</span><span class="p">(</span><span class="n">Vector2</span><span class="p">.</span><span class="n">new</span><span class="p">())</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setdrag">SetDrag<a class="headerlink" href="#setdrag" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetDrag( <code>Drag:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the time that it takes for a particle to reach half of its velocity.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetDrag</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setscale">SetScale<a class="headerlink" href="#setscale" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetScale( <code>New Scale:</code> <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberSequence"><code>NumberSequence</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the transition of the particle's size.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">local</span> <span class="n">scaleNumberSequence</span> <span class="o">=</span> <span class="n">NumberSequence</span><span class="p">.</span><span class="n">new</span><span class="p">({</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">NumberSequenceKeypoint</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">),</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">NumberSequenceKeypoint</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">})</span> 
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetScale</span><span class="p">(</span><span class="n">scaleNumberSequence</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="setpropertytransition">SetPropertyTransition<a class="headerlink" href="#setpropertytransition" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> ParticleEmiter:SetPropertyTransition( <code>Property Name:</code> <a href="https://create.roblox.com/docs/luau/strings"><code>string</code></a>, <code>Transition Sequence:</code> <a href="https://create.roblox.com/docs/reference/engine/datatypes/NumberSequence"><code>NumberSequence or ColorSequence</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the transition of one of the particle's property. Property name must exist for the current particle template.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">local</span> <span class="n">bgColorSequence</span> <span class="o">=</span> <span class="n">ColorSequence</span><span class="p">.</span><span class="n">new</span><span class="p">({</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">ColorSequenceKeypoint</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">85</span><span class="p">)),</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">ColorSequenceKeypoint</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">})</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">SetPropertyTransition</span><span class="p">(</span><span class="s1">&#39;BackgroundColor&#39;</span><span class="p">,</span>  <span class="n">bgColorSequence</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="getpropertytransition">GetPropertyTransition<a class="headerlink" href="#getpropertytransition" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><a href=""><code>PropertyTransition</code></a> ParticleEmiter:GetPropertyTransition( <code>Property Name:</code> <a href="https://create.roblox.com/docs/luau/strings"><code>string</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns a property transition from the property name given.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">GetPropertyTransition</span><span class="p">(</span><span class="s1">&#39;BackgroundColor&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="emit">Emit<a class="headerlink" href="#emit" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>self</code> :Emit( <code>Emit Count:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emits the number of particles.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>self</code> :Emit(  )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emits a particle.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">Emit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="clearparticles">ClearParticles<a class="headerlink" href="#clearparticles" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>void</code> :ClearParticles( )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Removes every particle</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">ClearParticles</span><span class="p">()</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="clearpropertytransitions">ClearPropertyTransitions<a class="headerlink" href="#clearpropertytransitions" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>void</code> :ClearPropertyTransitions( )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Removes every property transition.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">ClearPropertyTransitions</span><span class="p">()</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="destroy">Destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>void</code> :Destroy( )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Destroys the particle emitter by destroying all the particles and some other stuff.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>void</code> :Update( <code>Delta Time:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Updates every particle's position. Runs for every frame the particle emitter has a particle template.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">ParticleEmitter</span><span class="p">:</span><span class="n">Update</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span> <span class="c1">-- i don&#39;t really know why you would want to do this</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Event Name</th>
+<th style="text-align: left;">Arguments</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ParticleCreated</td>
+<td style="text-align: left;"><code>Particle:</code> <a href=""><code>Particle</code></a></td>
+<td style="text-align: left;">Fired every time a particle is emitted</td>
+</tr>
+<tr>
+<td style="text-align: left;">ParticleUpdated</td>
+<td style="text-align: left;"><code>Particle:</code> <a href=""><code>Particle</code></a>, <code>DeltaTime:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a>, <code>LifetimeProgres:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">Fired every frame for every particle on the screen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lifetime Progress is a number from <code>0</code> to <code>1</code> which is the particle's age divided by the particle's determined lifetime</p>
+</div>
+<h2 id="particle">Particle<a class="headerlink" href="#particle" title="Permanent link">&para;</a></h2>
+<h3 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">VelocityDirection <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2"><code>Vector2</code></a></td>
+<td style="text-align: left;">The initial direction of the determined velocity.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Velocity <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2"><code>Vector2</code></a></td>
+<td style="text-align: left;">The current velocity of the particle in pixels.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Position <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2"><code>Vector2</code></a></td>
+<td style="text-align: left;">The current position of the particle in pixels.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CurrentAge <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">The amount of time the particle has been alive.</td>
+</tr>
+<tr>
+<td style="text-align: left;">DeterminedLifetime <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">The determined amount of time time until the particle will be destroyed.</td>
+</tr>
+<tr>
+<td style="text-align: left;">DeterminedRotationSpeed <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a></td>
+<td style="text-align: left;">The determined speed in rotations per second of the particle.</td>
+</tr>
+<tr>
+<td style="text-align: left;">GuiObject <a href="https://create.roblox.com/docs/reference/engine/classes/GuiObject"><code>GuiObject</code></a></td>
+<td style="text-align: left;">The particle's gui object.</td>
+</tr>
+<tr>
+<td style="text-align: left;">EmittedBy <a href=""><code>ParticleEmitter</code></a></td>
+<td style="text-align: left;">The particle's parent emitter.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Determined essentially just means its a single random number from a certain range.</p>
+</div>
+<h3 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h3>
+<h4 id="update_1">Update<a class="headerlink" href="#update_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>void</code> :Update( <code>Delta Time:</code> <a href="https://create.roblox.com/docs/luau/numbers"><code>Number</code></a> )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Updates the particle's position. Ran every frame for the particle's lifetime.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">Particle</span><span class="p">:</span><span class="n">Update</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span> <span class="c1">-- i don&#39;t really know why you would do this either</span>
+</span></code></pre></div>
+<hr>
+
+<h4 id="destroy_1">Destroy<a class="headerlink" href="#destroy_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><code>void</code> :Destroy( )</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Destroys the particle, removes it from the Particles table of the emitter, and removes references. Does this automatically on lifetime end.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-lua highlight"><span class="filename">Example</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">Particle</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Installation
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
