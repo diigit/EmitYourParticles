@@ -10,7 +10,7 @@ While making a game, I simply wanted some UI particles. The best module I found 
 
 I ended up taking a few hours to make a better module, and this EmitYourParticles is the result. It's surprisingly capable with what it can do!
 
-I have optimizations and improvements in mind and depending on the reaction this gets, I might add them (give a ❤ to the [DevForum post](#)).
+I have optimizations and improvements in mind and depending on the reaction this gets, I might add them (give a ❤ to the [DevForum post](https://devforum.roblox.com/t/emityourparticle-a-faster-and-better-2d-particle-emitter-v100/2842247)).
 
 ## Showcase
 
