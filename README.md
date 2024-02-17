@@ -1,16 +1,15 @@
-# EmitYourParticles
-### EmitYourParticles is a Roblox 2D GUI Particle Emitter. Easy-To-Use, optimized and feature packed.
-
-It has a ton of features. See for yourself: 
-
 <div align="center">
-  <video src="https://github.com/diigit/EmitYourParticles/assets/72575705/68b8a885-0baf-4ab4-a6c8-8f2a305f98e4" width=400></video>
+  <image src="https://sxcu.net/6sp2n8kA0.png" style="width:30%;"><br><br>
+  📖<a href="https://diigit.github.io/EmitYourParticles/">Documentation</a>
 </div>
 
-Drag, reducing size, fading out and more! EmitYourParticles has it all! Squares are not the only thing it can emit either.
+## About Emit Your Particles
 
-<div align="center">
-  <video src="https://github.com/diigit/EmitYourParticles/assets/72575705/b64ff6ea-6b3e-4caf-b649-b9a1823886b3" width=400></video>
-</div>
+EmitYourParticles is a module designed to mimic Roblox's 3D particle emitters as closely as possible, but make them 2D. It was also made to be user-friendly but at the same time highly customizable and efficient. Check the documentation for installation, usage, and more information.
 
-Read the documentation for more information on its various functions.
+## ❔ Examples
+
+<img alt="images" align="center" src="https://sxcu.net/6sprWbdrT.gif" style="width:49%;"/>
+<img alt="squares" src="https://sxcu.net/6spv9BBCV.gif" style="width:49%;"/>
+
+Read the [documentation](https://diigit.github.io/EmitYourParticles/) for more information on its various functions.
