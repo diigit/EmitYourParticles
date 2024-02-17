@@ -1,6 +1,6 @@
 <div align="center">
   <image src="https://sxcu.net/6sp2n8kA0.png" style="width:30%;"><br><br>
-  📖<a href="https://diigit.github.io/EmitYourParticles/">Documentation</a>
+  <a href="https://diigit.github.io/EmitYourParticles/"><img src="Documentation Button.png" width=140></a> <a href="https://github.com/diigit/EmitYourParticles"><img src="GitHub Button.png" width=140></a>
 </div>
 
 ## About Emit Your Particles
