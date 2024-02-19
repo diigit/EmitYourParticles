@@ -617,6 +617,8 @@ function emitYourParticleModule.newParticle(EMITTER: ParticleEmitter2D): Particl
 	particle.EmittedBy = EMITTER
 	
 	table.insert(EMITTER.Particles, particle)
+
+	EMITTER.ParticleCreated:Fire(particle)
 	
 	return particle
 end
